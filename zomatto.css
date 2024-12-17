@@ -331,7 +331,77 @@
   } .column {
     display: flex;
     flex-direction: column;
+  }  header {
+    position: absolute;
+    width: 100%;
+  } nav {
+    width: 80%;
+    font-weight: 200;
+    flex-wrap: nowrap;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    padding: 1.7rem 0px;
+    margin: auto;
+    transition: opacity 0.25s linear 0s, visibility 0.25s linear 0s,
+      height 0.25s cubic-bezier(0.52, 0.16, 0.24, 1) 0s;
+    color: rgb(255, 255, 255);
+  }nav .nav-item {
+    padding-bottom: 1rem;
+    border-radius: 0px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0px 0px 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 1rem;
+  } nav .nav-item a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+  }.right {
+    display: flex;
   }
+.right .nav-item a {
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    font-weight: 200;
+    padding: 0.8rem;
+  } .user-icon {
+    border: 1px solid rgb(207, 207, 207);
+    height: 3.2rem;
+    width: 3.2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: rgb(239, 79, 95);
+    display: none;
+  }
+@media (max-width: 800px) {
+    nav {
+      justify-content: flex-end;
+      padding: 0 1rem;
+      width: 100%;
+      height: 5.6rem;
+    }.user-icon {
+      display: flex;
+    }
+  .left {  display: none;
+    }.right {
+      display: none;
+    }
   .main-body {
     position: relative;
     max-width: 110rem;
@@ -548,8 +618,7 @@
     }.collection {
       max-width: 45%;
     }
-  
-    .popular-localities .title {
+ .popular-localities .title {
       font-weight: 500;
       font-size: 1.8rem;
       line-height: 2.4rem;
@@ -558,78 +627,7 @@
   .locality {
       width: 100%;
     }
-  } header {
-    position: absolute;
-    width: 100%;
-  } nav {
-    width: 80%;
-    font-weight: 200;
-    flex-wrap: nowrap;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    user-select: none;
-    padding: 1.7rem 0px;
-    margin: auto;
-    transition: opacity 0.25s linear 0s, visibility 0.25s linear 0s,
-      height 0.25s cubic-bezier(0.52, 0.16, 0.24, 1) 0s;
-    color: rgb(255, 255, 255);
-  }nav .nav-item {
-    padding-bottom: 1rem;
-    border-radius: 0px;
-    box-sizing: border-box;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0px 0px 0.2rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding-bottom: 1rem;
-  } nav .nav-item a {
-    font-size: 1.4rem;
-    text-decoration: none;
-    cursor: pointer;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-  }.right {
-    display: flex;
-  }
-.right .nav-item a {
-    margin-right: 2rem;
-    font-size: 1.8rem;
-    font-weight: 200;
-    padding: 0.8rem;
-  } .user-icon {
-    border: 1px solid rgb(207, 207, 207);
-    height: 3.2rem;
-    width: 3.2rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    color: rgb(239, 79, 95);
-    display: none;
-  }
-@media (max-width: 800px) {
-    nav {
-      justify-content: flex-end;
-      padding: 0 1rem;
-      width: 100%;
-      height: 5.6rem;
-    }.user-icon {
-      display: flex;
-    }
-  .left {  display: none;
-    }.right {
-      display: none;
-    }
-  }.top {
+   }.top {
     position: relative;
     height: calc(100vh - 30rem);
     margin-bottom: 4rem;
@@ -657,10 +655,7 @@
     font-size: 1.6rem;
     width: 100%;
   }
-  
-  
-  
-  main h1 {
+   main h1 {
     margin-top: 3rem;
     color: white;
     text-align: center;
@@ -756,4 +751,4 @@ main .search_container .search .search_icon svg {
     main .search_container .search input {
       margin-left: 1.5rem;
     }
-}
+} 
